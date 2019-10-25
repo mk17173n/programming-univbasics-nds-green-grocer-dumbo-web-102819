@@ -30,10 +30,10 @@ def consolidate_cart(cart)
     i += 1
   end
   
-  # j = 0
-  # while j < cart.length do
-  #   newArr[j][:count] = 0
-  #   if
+  j = 0
+  while j < cart.length do
+    newArr[j][:count] = 0
+    if
 
 
   newArr
