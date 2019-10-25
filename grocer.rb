@@ -27,11 +27,9 @@ def consolidate_cart(cart)
     if !newArr.include?(cart[i][:item])
       cart[i][:count] = 1
       newArr << cart[i]
-    end
+    else
       
-    
-  
-
+    end
     i += 1
   end
 
