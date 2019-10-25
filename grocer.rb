@@ -31,8 +31,15 @@ def consolidate_cart(cart)
   end
   
   j = 0
-  while j < cart.length do
-    newArr[j][:count] = 1
+  while j < newArr.length do
+    newArr[j][:count] = 0
+    k = 0
+    while k < cart.length do
+      if cart[k][:item] == newArr[j].keys[0]
+        newArr[j][:count] += 1
+      end
+      k += 1
+    end
     j += 1
   end
 
