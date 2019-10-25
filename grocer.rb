@@ -33,8 +33,8 @@ def consolidate_cart(cart)
   j = 0
   while j < cart.length do
     newArr[j][:count] = 0
-    if
-
+    j += 1
+  end
 
   newArr
   
