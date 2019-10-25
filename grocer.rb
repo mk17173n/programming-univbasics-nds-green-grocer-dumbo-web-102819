@@ -28,7 +28,11 @@ def consolidate_cart(cart)
       cart[i][:count] = 1
       newArr << cart[i]
     else
-      
+      newArr.map do |item_hash|
+        if item_hash[:item] == cart[i][:item]
+          item_hash[:count] += 1
+        end
+      end
     end
     i += 1
   end
