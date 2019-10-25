@@ -28,10 +28,13 @@ def consolidate_cart(cart)
       item_hash = {}
       item_hash[cart[i][:item]] = {:price => cart[i][:price], :clearance => cart[i][:clearance]}
       item_hash[:count] = 1
-      newArr << item_hash# { AVOCADO => {} , :count => 1}
+      newArr << item_hash
+      # { AVOCADO => {} , :count => 1}
     end
     i += 1
   end
+  
+  
 
   newArr
   
