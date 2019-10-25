@@ -25,21 +25,13 @@ def consolidate_cart(cart)
   i = 0
   while i < cart.length do
     if !newArr.include?(cart[i][:item])
-      item_hash = {}
-      item_hash[cart[i][:item]] = {:price => cart[i][:price], :clearance => cart[i][:clearance]}
-      item_hash[:count] = 1
-      newArr << item_hash
-      # { AVOCADO => {} , :count => 1}
-    else
-      cart[i][:item]
-      j = 0
-      while j < newArr.length do
-        if newArr[j].keys[0] == cart[i][:item]
-          newArr[j][:count] += 1
-        end
-        j += 1
-      end
+      cart[i][:count] = 1
+      newArr << cart[i]
     end
+      
+    
+  
+
     i += 1
   end
 
